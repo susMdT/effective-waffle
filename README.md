@@ -5,8 +5,10 @@ TpAllocWork + TpPostWork + TpWaitForWork + TpReleaseWork to create + execute + c
 
 The callback is some scuffed assembly that queues up a ton of rop gadgets that will pop arguments (either hard coded values, or based on an offset within a struct passed as the TpAllocWork parameter) into the correct registers, then returning to the next gadget/function. Padding is creating between some function calls via pushing 5 garbage values + a gadget to move the stack pointer by 40 bytes as a hacky solution to fix some weird stack stuff I ran into. This is also probably why the call stack looks disgusting but idk how else to address that. 
 
+If you're trying to extend this and make it actually useful, there's gonna be a lot of weird stack fuckery going on (at least on my end). Also, can't guarantee the rop gadgets that I found will be present in all versions of windows (I was devving on Server 2016).
+
 ## Credits
 Kudaes, for creating [RustChain](https://github.com/Kudaes/RustChain) which the ROP idea came from for me  
 C5pider, for creating [Ekko](https://github.com/Cracked5pider/Ekko/) and helping me understand sleep encryption  
-x86natthew, for helping me troubleshoot weird stack stuff  
+x86matthew, for helping me troubleshoot weird stack stuff  
 NinjaParanoid, for providing a [blog post](https://0xdarkvortex.dev/hiding-in-plainsight/) on the Tp Apis  

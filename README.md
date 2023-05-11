@@ -9,4 +9,4 @@ The callback is some scuffed assembly that queues up a ton of rop gadgets that w
 Kudaes, for creating [RustChain](https://github.com/Kudaes/RustChain) which the ROP idea came from for me  
 C5pider, for creating [Ekko](https://github.com/Cracked5pider/Ekko/) and helping me understand sleep encryption  
 x86natthew, for helping me troubleshoot weird stack stuff  
-ParanoidNinja, for providing a [blog post](https://0xdarkvortex.dev/hiding-in-plainsight/) on the Tp Apis  
+NinjaParanoid, for providing a [blog post](https://0xdarkvortex.dev/hiding-in-plainsight/) on the Tp Apis  
